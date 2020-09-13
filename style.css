@@ -9,10 +9,9 @@ body, html {
 
 body div {
     margin: auto;
-    width: 50%;
+    max-width: 50%;
     display: block;
-    text-align: center;
-    overflow: hidden;
+    overflow-y: visible;
 }
 
 svg {
@@ -49,6 +48,8 @@ svg {
     to { fill: var(--sand); }
 }
 
-.elementToAnimate{
-    animation: yourAnimation 3s infinite 0s linear;
+@media (orientation: portrait) {
+    body div {
+        max-width: 100%;
+    }
 }
