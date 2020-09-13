@@ -50,6 +50,7 @@ svg {
 
 @media (orientation: portrait) {
     body div {
+        margin-top: 10vh;
         max-width: 100%;
     }
 }
