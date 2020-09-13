@@ -1,0 +1,54 @@
+:root {
+    --sand: #ffff00;
+}
+
+body, html {
+    margin: 0;
+    overflow: hidden;
+}
+
+body div {
+    margin: auto;
+    width: 50%;
+    display: block;
+    text-align: center;
+    overflow: hidden;
+}
+
+svg {
+    display: block;
+    margin: auto;
+    animation: spin 3s infinite;
+}
+
+#top_hour {
+    animation: hourglass_empty 3s infinite;
+    animation-fill-mode: backwards;
+}
+
+#bot_hour {
+    animation: hourglass_fill 3s infinite;
+    animation-fill-mode: forwards;
+}
+
+@keyframes spin{
+    from { transform: rotate(0deg); }
+    50% { transform: rotate(0deg);  }
+    to { transform: rotate(180deg); }
+}
+
+@keyframes hourglass_empty {
+    from { fill: var(--sand); }
+    50% { fill: #00000000; }
+    to { fill: #00000000; }
+}
+
+@keyframes hourglass_fill {
+    from { fill: #00000000; }
+    50% { fill: var(--sand); }
+    to { fill: var(--sand); }
+}
+
+.elementToAnimate{
+    animation: yourAnimation 3s infinite 0s linear;
+}
